@@ -11,25 +11,24 @@ This is a solution to the [Social links profile challenge on Frontend Mentor](ht
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
 
 Users should be able to:
 
-- See hover and focus states for all interactive elements on the page
+- View the optimal layout depending on their device's screen size
+- See hover and focus states for interactive elements
 
 ### Screenshot
 
-![](./screenshot desktop.png)
-![](./screenshot mobile.png)
+![](./public/screenshot%20desktop.png)
+![](./public/screenshot%20mobile.png)
 
 ### Links
 
-- Solution URL: [Solution URL here](https://github.com/chelsea-here/recipe-page)
-- Live Site URL: [Live site url](https://social-links-profile-chi-two.vercel.app/)
+- Solution URL: [https://github.com/chelsea-here/recipe-page](https://github.com/chelsea-here/recipe-page)
+- Live Site URL: [https://social-links-profile-chi-two.vercel.app/](https://social-links-profile-chi-two.vercel.app/)
 
 ## My process
 
