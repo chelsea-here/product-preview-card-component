@@ -1,0 +1,200 @@
+@import "mixins";
+@import "variables";
+
+//styles
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $primary-bkgd-color;
+  padding: 1rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  color: $neutral-dark;
+}
+
+/* CARD PREVIEW CONTAINER */
+.previewContainer {
+  //container should fill available space
+  width: 100%;
+  height: 100%;
+  //mobile-first styling gives column layout with top area (image) constrained
+  display: grid;
+  grid-template-rows: 15rem auto;
+  grid-template-columns: none;
+  //image and data areas are stacked
+  grid-template-areas:
+    "image"
+    "data";
+  border-radius: 0.625rem;
+  overflow: hidden;
+
+  @include desktop {
+    // desktop styling will be side to side with a max size of card.
+    max-width: 37.5rem;
+    max-height: 28.125rem;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: none;
+    //image and data areas are side-by-side
+    grid-template-areas: "image data";
+  }
+}
+
+/* IMAGE CONTAINER */
+.productImage {
+  grid-area: image;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageDesktop {
+  //hide on mobile screens
+  @include mobile {
+    display: none;
+  }
+  //show on desktop screens, inherit styling from parent div
+  @include desktop {
+    display: block;
+    width: inherit;
+    height: inherit;
+    object-fit: inherit;
+  }
+}
+
+.imageMobile {
+  //hide on desktop screens
+  @include desktop {
+    display: none;
+  }
+  //show on mobile screens, inherit styling from parent div
+  @include mobile {
+    display: block;
+    width: inherit;
+    height: inherit;
+    object-fit: inherit;
+  }
+}
+
+/* DATA CONTAINER */
+.dataContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1em;
+  grid-area: data;
+  width: 100%;
+  height: 100%;
+  background-color: $neutral-white;
+  padding: 2em;
+  font-size: 0.75rem;
+
+  @include desktop {
+    padding: 2.6666666666666667em;
+    gap: 1.6666666666666667em; // <= (20px/font-size)
+  }
+}
+
+.category {
+  color: $neutral-medium;
+  font-family: var(--font-mont);
+  line-height: 1.25em; // <= (15px/parent font-size)
+  letter-spacing: (0.4166666666666667em); // <= (5px/parent font-size)
+}
+
+.name {
+  font-family: var(--font-fraunces);
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 100%;
+}
+
+.description {
+  //added a little extra spacing between name and description classes to match sample.  By using em units the gap will adjust proportionally based on any user defined font adjustments
+  color: $neutral-medium;
+  margin-top: 0.2857142857142857em; // <= (4px/(font-size))
+  font-family: var(--font-mont);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.6428571428571428em; // <= (23px/(font-size))
+  @include desktop {
+    margin-top: 0.2857142857142857em; // <= ((24px-gap)/font-size)
+  }
+}
+
+.prices {
+  margin-top: 1em;
+  display: inline-flex;
+  flex-direction: row;
+  gap: 1.5em;
+  align-items: center;
+  @include desktop {
+    justify-self: flex-end;
+    margin-bottom: 0.8333333333333334em;
+  }
+}
+
+.price {
+  color: $primary-color;
+  font-family: var(--font-fraunces);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.retailPrice {
+  color: $neutral-medium;
+  font-family: var(--font-mont);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+.button {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.5714285714285714em; // <= (8px/(font-size))
+  gap: 0.7857142857142857em; // <= (11px/(font-size))
+  color: $neutral-white;
+  background-color: $primary-color;
+  height: 3.4285714285714284em; // <= (48px/(font-size))
+  font-family: var(--font-mont);
+  font-weight: 700;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: 0.625rem;
+
+  @include desktop {
+    margin-top: 0.7142857142857143em; // <= (10px/(font-size))
+  }
+
+  @include nonTouch {
+    //enable hover effect only on non-touch devices
+    //added a transition effect below for funsies
+    transition-duration: 0.3s;
+
+    :hover {
+      background-color: $neutral-dark;
+    }
+  }
+}
+
+.icon {
+  //adding a little extra code here so that if the user modifies the font size, the cart size will modify as well.
+  width: 0.9375rem;
+  height: 1rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
