@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/chelsea-here/recipe-page](https://github.com/chelsea-here/recipe-page)
-- Live Site URL: [https://social-links-profile-chi-two.vercel.app/](https://social-links-profile-chi-two.vercel.app/)
+- Solution URL: [https://github.com/chelsea-here/product-preview-card-component](https://github.com/chelsea-here/product-preview-card-component)
+- Live Site URL: [https://product-preview-card-component-pi-lime.vercel.app/](https://product-preview-card-component-pi-lime.vercel.app/)
 
 ## My process
 

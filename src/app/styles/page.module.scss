@@ -168,19 +168,16 @@
   font-size: 0.875rem;
   border: none;
   border-radius: 0.625rem;
+  //added a transition effect for hover / active state below for funsies
+  transition-duration: 0.3s;
 
   @include desktop {
     margin-top: 0.7142857142857143em; // <= (10px/(font-size))
   }
 
-  @include nonTouch {
+  @include hover-active {
     //enable hover effect only on non-touch devices
-    //added a transition effect below for funsies
-    transition-duration: 0.3s;
-
-    :hover {
-      background-color: $neutral-dark;
-    }
+    background-color: $neutral-dark;
   }
 }
 
