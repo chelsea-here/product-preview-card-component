@@ -172,12 +172,12 @@
   transition-duration: 0.3s;
 
   @include desktop {
-    margin-top: 0.7142857142857143em; // <= (10px/(font-size))
+    // margin-top: 0.7142857142857143em; // <= (10px/(font-size))
   }
 
   @include hover {
     //enable hover effect only on non-touch devices
-    background-color: #1c232b;
+    background-color: $neutral-dark;
   }
 }
 
@@ -187,11 +187,11 @@
   height: 1rem;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+// .attribution {
+//   font-size: 11px;
+//   text-align: center;
 
-  a {
-    color: hsl(228, 45%, 44%);
-  }
-}
+//   a {
+//     color: hsl(228, 45%, 44%);
+//   }
+// }
