@@ -172,7 +172,7 @@
   transition-duration: 0.3s;
 
   :focus {
-    background-color: $neutral-dark;
+    outline: 0.1875rem solid transparent;
   }
   @include desktop {
     // margin-top: 0.7142857142857143em; // <= (10px/(font-size))
