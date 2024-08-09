@@ -175,10 +175,9 @@
     margin-top: 0.7142857142857143em; // <= (10px/(font-size))
   }
 
-  @include hover-active {
+  @include hover {
     //enable hover effect only on non-touch devices
     background-color: #1c232b;
-    color: white;
   }
 }
 

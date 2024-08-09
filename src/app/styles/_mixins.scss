@@ -23,15 +23,8 @@
   }
 }
 
-@mixin hover-active {
-  &:hover {
-    .no-touch & {
-      @content;
-    }
-  }
-  &:active {
-    .touch & {
-      @content;
-    }
+@mixin hover {
+  &:not([disabled]):hover {
+    @content;
   }
 }
