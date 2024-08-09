@@ -178,6 +178,7 @@
   @include hover-active {
     //enable hover effect only on non-touch devices
     background-color: #1c232b;
+    color: white;
   }
 }
 
