@@ -26,7 +26,7 @@ export default function Home() {
               <b className={styles.price}>${price}</b>
               <p className={styles.retailPrice}>${retailPrice}</p>
             </div>
-            <a className={styles.button}>
+            <button className={styles.button}>
               <Image
                 className={styles.icon}
                 src="/icon-cart.svg"
@@ -35,7 +35,7 @@ export default function Home() {
                 alt="cart icon"
               />
               Add to Cart
-            </a>
+            </button>
           </div>
         </div>
       </main>
