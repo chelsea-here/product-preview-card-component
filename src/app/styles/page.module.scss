@@ -6,6 +6,7 @@
 .main {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: 100vh;
   background-color: $primary-bkgd-color;
@@ -194,6 +195,7 @@
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 1rem;
 
   a {
     color: hsl(228, 45%, 44%);

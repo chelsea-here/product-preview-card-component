@@ -38,27 +38,27 @@ export default function Home() {
             </button>
           </div>
         </div>
+        <div className={styles.attribution}>
+          <p>
+            Challenge by{" "}
+            <a
+              className="text-blue"
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+            >
+              Frontend Mentor
+            </a>
+            .
+          </p>
+          <p>
+            Coded by{" "}
+            <a className="text-blue" href="#">
+              Chelsea Anne Livingston Cruz
+            </a>
+            .
+          </p>
+        </div>
       </main>
-      <footer className="attribution">
-        <p>
-          Challenge by{" "}
-          <a
-            className="text-blue"
-            href="https://www.frontendmentor.io?ref=challenge"
-            target="_blank"
-          >
-            Frontend Mentor
-          </a>
-          .
-        </p>
-        <p>
-          Coded by{" "}
-          <a className="text-blue" href="#">
-            Chelsea Anne Livingston Cruz
-          </a>
-          .
-        </p>
-      </footer>
     </>
   );
 }
